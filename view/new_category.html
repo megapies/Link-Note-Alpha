@@ -1,0 +1,33 @@
+<div class="container new-category-container">
+    <div class="row new-category-row">
+        <div class="col-xs-12">
+            <h3>New Category</h3>
+        </div>
+    </div>
+    <div class="row new-category-row">
+        <div class="col-xs-3">
+            Name
+        </div>
+        <div class="col-xs-8">
+            <input type="text" ng-model="name">
+        </div>
+    </div>
+    <div class="row new-category-row">
+        <div class="col-xs-3">
+            Color
+        </div>
+        <div class="col-xs-8">
+            <input type="text" ng-model="color">
+        </div>
+        <div class="col-xs-1" style="background:{{color}};border: 1px">
+
+        </div>
+        {{color}}
+    </div>
+    <div class="row new-category-row">
+        <div class="col-xs-12" >
+            <button ng-click="onClickAdd()" class="btn btn-primary">Add</button>
+            <button ng-click="onClickClose()" class="btn btn-danger">Close</button>
+        </div>
+    </div>
+</div>

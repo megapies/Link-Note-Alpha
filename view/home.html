@@ -1,0 +1,139 @@
+<div class="container home">
+    <!--<div class="row header">-->
+    <!--<div class="col-xs-12">-->
+    <!--<h1><b>Home</b></h1>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<div class="row" style="background:#000;">-->
+    <!--<div class="col-xs-4" style="background:red;">-->
+    <!--aa<br><br>-->
+    <!--</div>-->
+    <!--<div class="col-xs-4" style="background:#2aabd2;">-->
+    <!--aa<br><br>-->
+    <!--</div>-->
+    <!--<div class="col-xs-4" style="background:green;">-->
+    <!--aa<br><br>-->
+    <!--</div>-->
+    <!--</div>-->
+    <style>
+        .menu1 {
+            background: url("/img/menu-bg-orange_1.jpg");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+
+        }
+
+        .image1 {
+            position: relative;
+        }
+
+        .text1 {
+            position: absolute;
+            top: 20px;
+            left: 0;
+            width: 100%;
+        }
+    </style>
+    <div class="row image1">
+        <img src="/img/menu-bg-red_2.jpg" class="img-responsive" width="100%">
+        <h2 class="text1">All</h2>
+    </div>
+    <div class="row image1">
+        <img src="/img/menu-bg-orange_2.jpg" class="img-responsive" width="100%">
+        <h2 class="text1">All</h2>
+    </div>
+    <div class="row image1">
+        <img src="/img/menu-bg-purple_2.jpg" class="img-responsive" width="100%">
+        <h2 class="text1">All</h2>
+    </div>
+    <div class="row image1">
+        <img src="/img/menu-bg-pink_2.jpg" class="img-responsive" width="100%">
+        <h2 class="text1">All</h2>
+    </div>
+    <div class="row image1">
+        <img src="/img/menu-bg-green_2.jpg" class="img-responsive" width="100%">
+        <h2 class="text1">All</h2>
+    </div>
+    <div class="row">
+        <!-- card  -->
+        <div class="col-xs-12 col-sm-3">
+            <div class="row home-card">
+                <div class="col-xs-6 col-sm-12 home-icon-slot">
+                    <a href="#!item-list/{{All}}">
+                        <img src="/img/item-icon.png" class="img-circle center-block home-icon">
+                    </a>
+                </div>
+                <div class="col-xs-6 col-sm-12" style="text-align:center">
+                    <a href="#!item-list/{{All}}">
+                        <h4><b>All Link</b></h4>
+                    </a>
+                    <p>
+                        Show all link item
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- card  -->
+        <div class="col-xs-12 col-sm-3">
+            <div class="row home-card">
+                <div class="col-xs-6 col-sm-12 home-icon-slot">
+                    <a href="#!category">
+                        <img src="/img/category-icon.png" class="img-circle center-block home-icon">
+                    </a>
+                </div>
+                <div class="col-xs-6 col-sm-12">
+                    <a href="#!category">
+                        <h4><b>Categories</b></h4>
+                    </a>
+                    <p>
+                        Show all category
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- card  -->
+        <div class="col-xs-12 col-sm-3">
+            <div class="row home-card">
+                <div class="col-xs-6 col-sm-12 home-icon-slot">
+                    <a href="#!profile">
+                        <img src="/img/profile-icon.png" class="img-circle center-block home-icon">
+                    </a>
+                </div>
+                <div class="col-xs-6 col-sm-12">
+                    <a href="#!profile">
+                        <h4><b>Profile</b></h4>
+                    </a>
+                    <p>detail</p>
+                </div>
+            </div>
+        </div>
+        <!-- card  -->
+        <div class="col-xs-12 col-sm-3">
+            <div class="row home-card">
+                <div class="col-xs-6 col-sm-12 home-icon-slot">
+                    <img ng-click="onClickNewItem()" src="/img/new-item-icon.png" class="img-circle center-block home-icon">
+                </div>
+                <div class="col-xs-6 col-sm-12">
+                    <h4 ng-click="onClickNewItem()"><b>New Link</b></h4>
+                    <p>detail</p>
+                </div>
+            </div>
+        </div>
+        <!-- card  -->
+        <div class="col-xs-12 col-sm-3">
+            <div class="row home-card">
+                <div class="col-xs-6 col-sm-12 home-icon-slot">
+                    <img ng-click="onClickNewCategory()" src="/img/new-category-icon.png" class="img-circle center-block home-icon">
+                </div>
+                <div class="col-xs-6 col-sm-12">
+                    <h4><b ng-click="onClickNewCategory()">New Category</b></h4>
+                    <p>detail</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

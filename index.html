@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html style="height: 100%;min-height:100%;">
+<head>
+  <script src="angular/angular.min.js"></script>
+  <script src="angular-route/angular-route.js"></script>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>Link Note Alpha</title>
+  <!-- Bootstrap -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/app.css" rel="stylesheet" />
+  <style>
+    
+  </style>
+</head>
+
+<body ng-app="app" style="height: 100%;min-height:100%;background:#000;">
+  <div class="container" ng-controller="headerController">
+    <!-- header row -->
+    <div class="row header-banner" style="padding: 0px">
+      <img src="/img/banner_2.jpg" class="img-responsive" width="100%">
+    </div>
+    <!-- nav bar row -->
+    <div class="row header-navbar">
+      <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#/!">Link Note Alpha</a>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+              <li><a href="#/!">Home</a></li>
+              <li><a href="#!category">Category</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li ng-click="onClickLogin()"><a href="#/!">{{getLogInText()}}</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <div class="row header-volatile" ng-show="warning">
+      Warning! This is volatile mode. Your data don't store in database. Just log in to store your data.
+    </div>
+  </div>
+
+  <div class="container">
+    <!-- content row -->
+    <div class="row view-container" ng-view style="min-height: 100%;">
+    </div>
+  </div>
+
+  <!-- firebase init script -->
+  <script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase-database.js"></script>
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/bootstrap.min.js"></script>
+  <!--<script src="angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.min.js"></script>
+  <script src="js/manager/route-manager.js"></script>
+  <script src="js/manager/database-manager.js"></script>
+  <script src="js/manager/controller-manager.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<div class="content-container">
+   <div class="row categories-header">
+       <h1><b>Categories</b></h1>
+   </div>
+
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-4 " ng-repeat="c in categories">
+            <div class="row category-card">
+                <div class="col-xs-2 block" style="background:{{c.color}};">
+
+                </div>
+                <div class="col-xs-9 overflow-hide">
+                    <a href="#!item-list/{{c.id}}">
+                        <b>{{c.name}}</b>
+                    </a>
+                </div>
+                <div class="col-xs-1">
+                    <span ng-click="onClickSetting(c.id)" class="glyphicon glyphicon-option-vertical" aria-hidden="true" style="color: white"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

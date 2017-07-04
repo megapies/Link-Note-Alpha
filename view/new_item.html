@@ -1,0 +1,43 @@
+<div class="container new-item-container">
+    <div class="row">
+        <div class="col-xs-12">
+            <h3>New Link.</h3>
+
+        </div>
+    </div>
+    <div class="row new-item-row">
+        <div class="col-xs-3">
+            Name
+        </div>
+        <div class="col-xs-9">
+            <input type="text" ng-model="name">
+        </div>
+    </div>
+    <div class="row new-item-row">
+        <div class="col-xs-3">
+            URL
+        </div>
+        <div class="col-xs-9">
+            <input type="text" ng-model="url">
+        </div>
+    </div>
+    <div class="row new-item-row">
+        <div class="col-xs-3">
+            Category
+        </div>
+        <div class="col-xs-9">
+            <select class="form-control" style="width: auto" ng-model="category">
+                <option ng-repeat="c in categories" value="{{c.id}}">{{c.name}}</option>
+            </select>
+        </div>
+    </div>
+    <div class="row new-item-row">
+        <div class="col-xs-12" >
+            <button ng-click="onClickAdd()" class="btn btn-primary">Add</button>
+            <button ng-click="onClickClose()" class="btn btn-danger">Close</button>
+        </div>
+        <!--<div class="col-xs-12 col-sm-6">-->
+            <!---->
+        <!--</div>-->
+    </div>
+</div>

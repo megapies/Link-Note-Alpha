@@ -21,6 +21,7 @@
     <!-- header row -->
     <div class="row header-banner" style="padding: 0px">
       <img src="/img/banner_2.jpg" class="img-responsive" width="100%">
+    <!-- <div style="background: red; height: 50px"></div> -->
     </div>
     <!-- nav bar row -->
     <div class="row header-navbar">
@@ -52,18 +53,30 @@
     </div>
   </div>
 
-  <div class="container" style="min-height: 50%; background:#616161;">
+  <div class="container view-container">
     <!-- content row -->
-    <div class="row view-container" ng-view style="min-height: 100%;">
+    <div class="row " ng-view style="min-height: 100%;">
     </div>
   </div>
 
-  <div class="container" style="background:#424242;color: white; text-align: center">
+  <div class="container" style="background:#424242;color: white;">
     <div class="row">
-      <div class="col-xs-12">
-        sddsddsadd
+      <div class="col-xs-12 col-sm-6">
+        <b>Reference</b> <br>
+        <hr style="margin-top:0px ">
+        <a href="https://firebase.google.com/docs/reference/">
+          Firebase Reference
+        </a> <br>
+        <a href="https://developers.facebook.com/docs/javascript/reference/v2.9">
+          Facebook SDK for JS
+        </a> <br>
+        <a href="https://developers.facebook.com/docs/javascript/reference/v2.9">
+          AngularJS API Docs
+        </a> <br>
       </div>
+      
     </div>
+
   </div>
 
   <!-- firebase init script -->

@@ -29,6 +29,12 @@
     text-align: center;
 }
 
+@media only screen and (max-width: 768px){
+    .home-card{
+        text-align: left;
+    }
+}
+
 .link-white {
     text-decoration: none;
     color: #ffffff;
@@ -45,7 +51,7 @@ a:visited {
     color: white;
 }
 
-/* mouse over link */
+/* mo68use over link */
 a:hover {
     color: white;
 }
@@ -102,6 +108,7 @@ a:active {
  /*view container style*/
 .view-container {
     background: #616161;
+    min-height: 50%;
 }
 
 /*new item style*/
@@ -166,6 +173,7 @@ a:active {
 }
 
 @media only screen and (max-width: 768px){
+    /*xs*/
     .userName{
         text-align: center;
     }

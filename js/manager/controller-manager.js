@@ -1,5 +1,9 @@
 var controllerManager = angular.module("controller-manager", []);
 
+controllerManager.config(function ($sceProvider) {
+    $sceProvider.enabled(false);
+});
+
 // controllerManager.run(['$rootScope', function($rootScope) {
 //     $rootScope.safeApply = function(fn) {
 //         var phase = this.$root.$$phase;
@@ -89,7 +93,7 @@ controllerManager.controller("newCategoryController", function ($scope, $uibModa
     $scope.onClickAdd = function () {
         var category = {
             "name" : $scope.name,
-            "color" : "#ffffff"
+            "color" : $scope.color
         };
 
         databaseService.addNewCategory(category);
@@ -203,18 +207,31 @@ controllerManager.controller("itemListController", function ($scope, $routeParam
             - in research, using jsonp instead was solve this error
         * $http.jsonp => Error: $sce:insecurl Processing of a Resource from Untrusted Source Blocked
             - in default angular blocked loading a resource from an insecure URL.
+        solution 1 : add secure url
+            $sce.trustUrl(url)     -- don't work
+            $sce.trustResource(url) -- don't work
+        solution 2 : disable $sce
+             angular.module('app').config(function ($sceProvider) {
+                   $sceProvider.enabled(false);
+             });
 
+        * Access Control Allow Originnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
      */
     var fetchImg = function () {
+        console.error("fetch ing");
         $scope.items.forEach(function (item) {
-            $http.jsonp(item.url).then(function (response) {
+            $http.get(item.url).then(function (response) {
                 console.log("item " + item.name);
                 console.dir(response);
+            }, function (response) {
+                console.log("item " + item.name + " failure");
+                console.log(response)
             })
         });
     };
     // TODO solve error to fetch img to preview link
-    // fetchImg();
+    fetchImg();
+
 
 
     $scope.onClickSetting = function (itemID) {

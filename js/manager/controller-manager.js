@@ -83,7 +83,7 @@ controllerManager.controller("newItemController", function ($scope, $uibModalIns
 });
 
 controllerManager.controller("newCategoryController", function ($scope, $uibModalInstance, databaseService) {
-    // TODO select category color
+    // TODO select category color picker
     $scope.name = "";
     $scope.color = "#000000";
     $scope.onClickClose = function () {
@@ -230,7 +230,7 @@ controllerManager.controller("itemListController", function ($scope, $routeParam
         });
     };
     // TODO solve error to fetch img to preview link
-    fetchImg();
+    // fetchImg();
 
 
 

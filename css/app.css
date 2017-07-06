@@ -110,7 +110,29 @@ a:active {
     background: #616161;
     min-height: 50%;
 }
-
+/*footer style*/
+.footer-container{
+    background:#424242;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.footer-contract{
+    text-align: right;
+}
+.contract-hr{
+    margin-right: 0;
+}
+@media only screen and (max-width: 768px){
+    .footer-contract{
+        margin-top: 10px;
+        text-align: left;
+    }
+    .contract-hr{
+        margin-left: 0;
+        /*margin-right: 50%;*/
+    }
+}
 /*new item style*/
 .new-item-container{
     padding:16px;
@@ -178,6 +200,7 @@ a:active {
         text-align: center;
     }
 }
+
 /*util style*/
 .overflow-hide{
     overflow: hidden;

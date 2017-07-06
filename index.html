@@ -41,7 +41,12 @@
               <li><a href="#!category">Category</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-              <li ng-click="onClickLogin()"><a href="#/!">{{getLogInText()}}</a></li>
+              <li ng-click="onClickLogin()">
+                  <!--<img src="/img/ic_facebook.png" class="img-responsive">-->
+                  <a href="#/!">
+                    {{getLogInText()}}
+                  </a>
+              </li>
             </ul>
           </div>
         </div>
@@ -59,11 +64,12 @@
     </div>
   </div>
 
-  <div class="container" style="background:#424242;color: white;">
+  <!-- footer -->
+  <div class="container footer-container" >
     <div class="row">
       <div class="col-xs-12 col-sm-6">
-        <b>Reference</b> <br>
-        <hr style="margin-top:0px ">
+        <b>Reference</b>
+        <hr style="margin-top:0; margin-bottom:5px; width: 50%" align="left">
         <a href="https://firebase.google.com/docs/reference/">
           Firebase Reference
         </a> <br>
@@ -74,7 +80,14 @@
           AngularJS API Docs
         </a> <br>
       </div>
-      
+
+      <div class="col-xs-12 col-sm-6 footer-contract">
+        <b>
+          Contract Us
+        </b>
+        <hr class="contract-hr" style="margin-top:0; margin-bottom: 5px; width: 50%">
+        natthapach.a@gmail.com
+      </div>
     </div>
 
   </div>

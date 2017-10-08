@@ -1,1 +1,1 @@
-# Link-Note-Alpha.github.io
+# https://link-note-alpha.firebaseapp.com/
